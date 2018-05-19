@@ -19,6 +19,11 @@
 @include mq(medium){
   .centered {
     text-align: center;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    @include flex;
+    justify-content: center;
   }
 }
 
@@ -28,42 +33,53 @@
   @include grid;
   background-color: #deb2ee;
   @extend %base-grid;
+  text-align: center;
 }
 
 .grid__col--4.theme__colors {
   @include grid;
   background-color: #7ee6fd;
   @extend %base-grid;
+  text-align: center;
 }
 
 .grid__col--5.theme__colors {
   @include grid;
   background-color: #88d9a0;
   @extend %base-grid;
+  text-align: center;
 }
 
 .grid__col--6.theme__colors {
   @include grid;
   background-color: #3fabca;
   @extend %base-grid;
+  text-align: center;
 }
 
 .grid__col--7.theme__colors {
   @include grid;
   background-color: #ec9fa3;
   @extend %base-grid;
+  text-align: center;
+  &.centered{
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .grid__col--8.theme__colors {
   @include grid;
   background-color: #fd9f85;
   @extend %base-grid;
+  text-align: center;
 }
 
 .grid__col--12.theme__colors {
   @include grid;
   background-color: #80e8d1;
   @extend %base-grid;
+  text-align: center;
 }
 
 //Calculate grid width
