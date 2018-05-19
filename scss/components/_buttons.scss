@@ -1,0 +1,20 @@
+.btn--default {
+  background-color: $circle-color-blue;
+  @extend %btn;
+}
+.btn--success{
+  background-color: $circle-color-green;
+  @extend %btn;
+}
+.btn--error{
+  background-color: $error-color;
+  @extend %btn;
+}
+.btn--warning{
+  background-color: $warning-color;
+  @extend %btn;
+}
+.btn--info{
+  background-color: $info-color;
+  @extend %btn;
+}

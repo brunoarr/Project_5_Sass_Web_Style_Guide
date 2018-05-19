@@ -1,0 +1,99 @@
+.container {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px 0px;
+  @include mq(medium){
+    max-width: 80%;
+  }
+}
+
+.grid__row {
+  padding: 20px 0;
+  @extend %centered;
+  @include mq(medium){
+    @include flex(row);
+    justify-content: space-between;
+  }
+}
+
+@include mq(medium){
+  .centered {
+    text-align: center;
+  }
+}
+
+//grid system
+
+.theme__colors.grid__col--3{
+  @include grid;
+  background-color: #deb2ee;
+  @extend %base-grid;
+}
+
+.grid__col--4.theme__colors {
+  @include grid;
+  background-color: #7ee6fd;
+  @extend %base-grid;
+}
+
+.grid__col--5.theme__colors {
+  @include grid;
+  background-color: #88d9a0;
+  @extend %base-grid;
+}
+
+.grid__col--6.theme__colors {
+  @include grid;
+  background-color: #3fabca;
+  @extend %base-grid;
+}
+
+.grid__col--7.theme__colors {
+  @include grid;
+  background-color: #ec9fa3;
+  @extend %base-grid;
+}
+
+.grid__col--8.theme__colors {
+  @include grid;
+  background-color: #fd9f85;
+  @extend %base-grid;
+}
+
+.grid__col--12.theme__colors {
+  @include grid;
+  background-color: #80e8d1;
+  @extend %base-grid;
+}
+
+//Calculate grid width
+@include mq(medium) {
+  @for $i from 1 to ($g-col-count + 1){
+
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    //generate column grid classes
+    .grid__col--#{$i} {
+      width: percentage($target / $context);
+    }
+  }
+}
+
+//Column styles
+/*
+[class^="grid__col--"] {
+  @include mq(small) {
+    margin: 12px 0;
+  }
+
+  @include mq(medium){
+    @include doubly($g-gutter-width / $context);
+    float: left;
+    min-height: 1px;
+    padding: 0 10px;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+*/

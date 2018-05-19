@@ -1,0 +1,21 @@
+.img--logo {
+  display: block;
+  margin: auto;
+  @include mq(medium){
+    @include flex(row);
+  }
+}
+
+.img--frame{
+    max-width: 90%;
+    margin: 15px auto;
+    display: block;
+    border: solid 1px $primary-color-lighter;
+    padding: 10px;
+  }
+
+.img--avatar{
+    max-width: 100%;
+    margin: 15px auto;
+    display: block;
+  }

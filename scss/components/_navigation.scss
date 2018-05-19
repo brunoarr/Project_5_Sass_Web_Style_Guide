@@ -1,0 +1,25 @@
+.nav {
+  padding-left: 0px;
+  @include mq(medium){
+    @include flex(row);
+    justify-content: center;
+  }
+  &__item{
+    text-align: center;
+    list-style-type: none;
+    }
+  & a{
+    text-decoration: none;
+    color: $primary-color;
+    width: 100%;
+    padding: 15px 0;
+    display: inline-block;
+      @include mq(medium){
+        padding: 5px;
+        margin: 15px;
+      }
+      &:hover {
+      @extend %menu-hover;
+      }
+    }
+}

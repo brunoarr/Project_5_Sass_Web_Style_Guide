@@ -1,0 +1,27 @@
+.headline--primary {
+  color: $circle-color-green;
+  padding-left: 10px;
+  font-family: $stack-quicksand;
+}
+
+.headline--secondary {
+  color: $primary-color-lighter;
+  font-size: 15px;
+  font-weight: lighter;
+  font-family: $stack-quicksand;
+}
+
+.blockquote {
+  font-size: 22px;
+  padding-left: 10px;
+  font-style: italic;
+  border-left: solid 8px $circle-color-green;
+  color: $primary-color-darker;
+  font-family: $stack-roboto;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $circle-color-blue;
+}

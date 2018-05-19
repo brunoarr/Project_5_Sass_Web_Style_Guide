@@ -1,0 +1,32 @@
+// COLORS
+
+//Defaut grey color for text
+$primary-color: #808080;
+$primary-color-lighter: #9E9E9E;
+$primary-color-darker: #6C6C6C;
+
+//branded colors
+$circle-color-green: #5AE2C2;
+$circle-color-blue: #4EDEFF;
+
+//Other colors
+$warning-color: #FF8040;
+$error-color: #FF5050;
+$info-color: #9E1E9E;
+
+// FONTS
+
+$stack-roboto: 'Roboto', sans-serif;
+$stack-quicksand: 'Quicksand', sans-serif;
+
+// MEDIA QUERY BREAKPOINTS
+
+$brk-sm: 1px;
+$brk-md: 768px;
+
+//GRID
+
+$g-col-width: 65px;
+$g-gutter-width: 20px;
+$g-col-count: 12;
+$g-cont-max: 1050px;

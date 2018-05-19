@@ -1,0 +1,49 @@
+//Flexbox
+
+@mixin flex ($orientation: row) {
+  @if $orientation == "row" {
+    display: flex;
+    flex-direction: row;
+  }
+  @else if $orientation == "column" {
+    display: flex;
+    flex-direction: column;
+  }
+  @else {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+//Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+  & + & {
+    margin-left: $margin;
+    @content;
+  }
+}
+
+//grid base style
+
+@mixin grid {
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media (min-width: $brk-sm) and (max-width: $brk-md) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media (min-width: $brk-md + 1){
+      @content;
+    }
+  }
+  @else {
+    @error "#{$break} is not a valid variable."
+  }
+}

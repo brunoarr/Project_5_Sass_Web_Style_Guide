@@ -1,0 +1,32 @@
+.form{
+  padding: 40px 0 20px 0;
+  @include mq(medium){
+    padding-top: 0px;
+  }
+  &__label--hidden {
+    display: none;
+  }
+  &__input {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border-bottom: solid 4px $circle-color-green;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: $circle-color-blue;
+}
+
+#forms.headline--secondary{
+  margin: 20px 0;
+}

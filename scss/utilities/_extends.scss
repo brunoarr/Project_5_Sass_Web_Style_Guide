@@ -1,0 +1,43 @@
+//Button Style
+%btn{
+  border-radius: 4px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  font-family: $stack-roboto;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 1px;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
+
+//center
+
+%centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Grid System showcase
+
+%base-grid {
+  color: $primary-color-darker;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+//menu item hover
+
+%menu-hover {
+  color: #fff;
+  background-color: $circle-color-green;
+  border-radius: 5px;
+}
